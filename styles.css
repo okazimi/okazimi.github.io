@@ -51,3 +51,7 @@ h1, h3 {
   line-height: 40px;
   width: 0px;
 }
+
+.fa-search {
+     color: white
+}
