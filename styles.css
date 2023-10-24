@@ -36,7 +36,8 @@ h1, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s
+  transition: 0.4s;
+  text-decoration: none;   
 }
 
 .search-txt{
