@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+ 
+<head>
+<!-- JS Link -->
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+<!-- CSS Styles -->
+<style> 
+        table { 
+            font-family: arial, sans-serif; 
+            border-collapse: collapse; 
+            width: 50%; 
+        } 
+        td, 
+        th { 
+            border: 1px solid #dddddd; 
+            text-align: left; 
+            padding: 8px; 
+        } 
+        h1 { 
+            color: blue; 
+        } 
+</style> 
+</head>
+ 
+<body> 
+<center> 
+<!-- Title -->
+<h1>ARES EMPCO Applications</h1> 
+<!-- Description -->
+<h3> 
+          List of ARES EMPCO Supported Applications
+</h3> 
+<!-- Search Bar -->
+<b>Search: <input id="application-search" type="text" placeholder="Search App ID or App Name"></b> 
+<br> 
+<br> 
+<!-- Table -->
+<table> 
+<!-- Table Column Headers -->
+<tr> 
+<th>Application ID</th> 
+<th>Application Name</th>
+<th>Primary POC</th>
+<th>Secondary POC</th>
+<th>Group Distribution List</th>
+</tr> 
+<tbody id="application-list"> 
+<!-- SmartUM Entry -->
+<tr> 
+<td>1</td> 
+<td><a href="C:\Program Files\" target="_blank" attribute>SmartUM</a></td> 
+</tr> 
+<!-- Aerial Entry -->
+<tr>         
+<td>2</td> 
+<td><a href="https://hcscaerial.medecision.com/ACM/login.faces" target="_blank" attribute>Aerial</a></td>
+</tr>
+<!-- ARIS Entry -->
+<tr>
+<td>3</td> 
+<td><a href="https://aris.fyiblue.com/login.htm" target="_blank" attribute>ARIS</a></td>
+</tr> 
+<!-- Prime Entry -->
+<tr>
+<td>4</td> 
+<td><a href="https://rxletter.fyiblue.com" target="_blank" attribute>Prime</a></td>
+</tr> 
+</tbody> 
+</table> 
+<!-- JS for Search Bar Functionality -->
+<script> 
+            $(document).ready(function() {
+            	// Obtain value for the applicaiton-search input box on user key release
+                $("#application-search").on("keyup", function() { 
+                	// Assign input to variable named value
+                    var value = $(this).val().toLowerCase(); 
+                    // Iterate through each row in the #application-list table
+                    $("#application-list tr").filter(function() { 
+                    	// Collect data from each row in the #application-list table as lower case string
+                        // Searches for index of the text entered in search box (Value of -1 assigned if not found)
+                        // Toggles the row if value is -1
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1) 
+                    }); 
+                }); 
+            }); 
+</script> 
+</center> 
+</body> 
+</html>
