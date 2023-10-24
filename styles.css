@@ -6,6 +6,10 @@ h1, h3 {
     color: #1450A3;
 }     
 
+::placeholder {
+  color: white;
+}
+
 .search-box {
     /* position: absolute; */
     /* top: 50%; */
