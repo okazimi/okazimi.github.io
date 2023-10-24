@@ -6,15 +6,16 @@ h1, h3 {
     color: #1450A3;
 }     
 
-.search-box{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition: (-50%,-50%);
-  background-color: #2f3640;
-  height: 40px;
-  border-radius: 40px;
-  padding: 10px
+.search-box {
+    /* position: absolute; */
+    /* top: 50%; */
+    left: 50%;
+    transition: (-50%,-50%);
+    background-color: #1450A3;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    width: fit-content;
 }
 
 .search-box:hover > .search-txt{
@@ -50,4 +51,8 @@ h1, h3 {
   transition: 0.4s;
   line-height: 40px;
   width: 0px;
+}
+
+.fa-search {
+     color: white
 }
